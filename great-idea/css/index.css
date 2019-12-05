@@ -68,7 +68,7 @@ h1, h2, h3, h4, h5 {
 
 /* Copy and paste your work from yesterday here and start to refactor into flexbox */
 
-/* ////////// HOME PAGE \\\\\\\\\\\ */
+/* ////////// HOME PAGE \\\\\\\\\\ */
 
 /* Styling Nav */
 .navbar {
@@ -90,7 +90,6 @@ nav {
 	display: flex;
 	align-items: center;
 	flex-wrap: wrap;
-	border: solid 1px black;
 }
 nav a {
 	text-decoration: none;
@@ -107,7 +106,6 @@ nav a:hover {
 header {
 	display: block;
 	margin: 0 auto;
-	padding-top: 100px;
 	text-align: center;
 }
 #header-section {
@@ -117,17 +115,26 @@ header {
 	line-height: 100%;
 	font-size: 50px;
 	text-align: center;
+	padding-top: 100px;
 }
 #header-section div {
 	margin-right: 15%;
 }
-#header-section a {
+.button {
 	font-family: Bebas Neue;
 	text-decoration: none;
 	color: rgb(180, 10, 0);
 	border: solid 3px rgb(180, 10, 0);
-	padding: 5px;
+	padding: 5px 30px;
 	font-size: 25px;
+	border-radius: 10px;
+	box-shadow: 1px 2px 8px rgb(150, 10, 0);
+}
+.button:hover {
+	background-color: rgb(180, 10, 0);
+	border-color: #eee;
+	color: #eee;
+	box-shadow: 1px 2px 8px grey;
 }
 
 /* Styling Sections */
@@ -142,24 +149,17 @@ header {
 	margin: 30px 0 30px 50%;
 	transform: translate(-50%);
 }
-.section1 {
+.section-section {
 	margin-right: 5%;
 	text-align: left;
 }
-.section1 p {
+.section-section p {
 	text-align: justify;
 }
 .middle-img {
 	width: 100%;
 	display: block;
 	margin: 0 auto 30px;
-}
-.section2 {
-	margin-right: 5%;
-	text-align: left;
-}
-.section2 p {
-	text-align: justify;
 }
 .contact {
 	display: flex;
@@ -179,4 +179,49 @@ hr {
 footer {
 	text-align: center;
 	padding-bottom: 30px;
+}
+
+/* ////////// SERVICES PAGE \\\\\\\\\\ */
+
+/* Header */
+#services-header {
+	text-align: justify;
+	padding: 50px 0;
+}
+#services-header h1 {
+	font-size: 30px;
+	margin-top: 20px;
+}
+.services-header-img, .services-info-img {
+	width: 100%;
+}
+
+/* Main Section */
+.section-grid {
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+.grid {
+	margin: 20px 0;
+	padding: 30px;
+	width: 49%;
+	background-color: #eee;
+	border: solid 1px rgb(180, 10, 0);
+	border-radius: 3px;
+}
+.grid p {
+	margin-bottom: 25px;
+}
+.grid .button {
+	font-size: 20px;
+}
+
+/* End Section */
+.list {
+	list-style: square inside;
+	margin-top: 20px;
+	border: solid 1px red;
+}
+h2 {
+	color: rgb(180, 10, 0);
 }
