@@ -82,8 +82,8 @@ h1, h2, h3, h4, h5 {
 	position: fixed;
 	z-index: 1;
 }
-.navbar img {
-	margin-right: 5%;
+.logo {
+	margin-right: 20px;
 }
 nav {
 	width: 68%;
@@ -93,7 +93,7 @@ nav {
 }
 nav a {
 	text-decoration: none;
-	color: lightgrey;
+	color: #eee;
 	font-size: 20px;
 	margin-left: 7%;
 }
@@ -111,8 +111,8 @@ header {
 #header-section {
 	display: flex;
 	justify-content: center;
+	flex-wrap: wrap;
 	align-items: center;
-	line-height: 100%;
 	font-size: 50px;
 	text-align: center;
 	padding-top: 100px;
@@ -145,13 +145,17 @@ header {
 }
 .section {
 	display: flex;
+	justify-content: space-between;
 	width: 100%;
 	margin: 30px 0 30px 50%;
 	transform: translate(-50%);
 }
 .section-section {
-	margin-right: 5%;
+	width: 49%;
 	text-align: left;
+}
+.section-section2 {
+	width: 32%;
 }
 .section-section p {
 	text-align: justify;
@@ -178,7 +182,7 @@ hr {
 /* Styling Footer */
 footer {
 	text-align: center;
-	padding-bottom: 30px;
+	margin: 50px 0;
 }
 
 /* ////////// SERVICES PAGE \\\\\\\\\\ */
@@ -220,8 +224,88 @@ footer {
 .list {
 	list-style: square inside;
 	margin-top: 20px;
-	border: solid 1px red;
 }
 h2 {
 	color: rgb(180, 10, 0);
+}
+.margin-correcting {
+	margin-right: 10px;
+}
+
+/* ////////// MEDIA QUERIES \\\\\\\\\\ */
+@media (max-width: 800px) {
+	.section-last {
+		flex-direction: column;
+		align-items: center;
+	}
+	.list {
+		margin-bottom: 20px;
+	}
+	#home-header-img {
+		width: 45%;
+	}
+}
+@media (max-width: 600px) {
+	section {
+		flex-direction: column;
+		align-items: center;
+	}
+	.grid {
+		width: 100%;
+	}
+	.section-section, .section-section2 {
+		width: 100%;
+		margin-bottom: 20px;
+	}
+	#header-section {
+		font-size: 40px;
+	}
+}
+@media (max-width: 500px) {
+	#header-section {
+		font-size: 30px;
+	}
+	.navbar {
+		flex-direction: column-reverse;
+		align-items: center;
+	}
+	nav {
+		width: 100%;
+		text-align: center;
+	}
+	nav a {
+		font-size: 18px;
+		padding: 3px;
+	}
+	.logo {
+		width: 60%;
+		margin-right: 0;
+	}
+}
+@media (max-width: 450px) {
+	#header-section {
+		flex-direction: column;
+		align-items: center;
+	}
+	#header-section div {
+		margin-right: 0;
+		padding-bottom: 30px;
+		color: white;
+	}
+	html {
+		background: url(../img/header-img.png) no-repeat top center fixed;
+		background-size: 120%;
+	}
+	.page {
+		z-index: 1;
+		background-color: white;
+		box-sizing: content-box;
+		padding: 20px 10% 0;
+	}
+	#header-section img {
+		display: none;
+	}
+	#services-page {
+		margin-top: 0;
+	}
 }
